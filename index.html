@@ -23,189 +23,362 @@
         <div class="reveal">
             <div class="slides">
                 <section>
-                    <h1>Beautiful presentations</h1>
-                    <h2>New features</h2>
-                    <ul>
-                        <li>Nerd icons </li>
-                        <li>
-                            <code class="js">
-                                (inline) => code("highlighting")
-                            </code>
-                        </li>
-                        <li>Automatic QR Code generation</li>
-                        <li>and much more!</li>
-                    </ul>
-                </section>
-                <section>
-                    <h1>CUSTOM TOKYONIGHT THEME</h1>
-                    <h2 class="fragment">THAT HAS</h2>
-                    <h3 class="fragment">MULTI</h3>
-                    <h4 class="fragment">LEVEL</h4>
-                    <h5 class="fragment">HEADING</h5>
-                    <h6 class="fragment">COLORS</h6>
-                    <h6>
-                        Thanks to this project
-                        <a
-                            href="https://github.com/tcmmichaelb139/obsidian-tokyonight">
-                            
-                        </a>
-                        for the colorscheme!
-                    </h6>
-                </section>
-                <section>
-                    <section>
-                        <h1>Tailwind CSS</h1>
-                        <div class="grid grid-cols-2 gap-8">
-                            <div>
-                                <h5>Lorem, ipsum.</h5>
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur
-                                    adipisicing elit. Error quod fugiat harum
-                                    modi laboriosam dignissimos, maxime
-                                    possimus? Error, nihil in.
-                                </p>
-                            </div>
-                            <div>
-                                <h5>Lorem, ipsum.</h5>
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur
-                                    adipisicing elit. Error quod fugiat harum
-                                    modi laboriosam dignissimos, maxime
-                                    possimus? Error, nihil in.
-                                </p>
-                            </div>
-                            <div class="col-span-2">
-                                <h5>Lorem, ipsum.</h5>
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur
-                                    adipisicing elit. Error quod fugiat harum
-                                    modi laboriosam dignissimos, maxime
-                                    possimus? Error, nihil in.
-                                </p>
-                            </div>
-                        </div>
-                    </section>
-                    <section>
-                        <h1>Custom classes</h1>
-                        <div class="grid grid-cols-3 gap-8">
-                            <div class="border-r">
-                                <h5>border-r</h5>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur
-                                    adipisicing elit. Illum, soluta!
-                                </p>
-                            </div>
-                            <div class="border-o">
-                                <h5>border-o</h5>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur
-                                    adipisicing elit. Illum, soluta!
-                                </p>
-                            </div>
-                            <div class="border-y">
-                                <h5>border-y</h5>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur
-                                    adipisicing elit. Illum, soluta!
-                                </p>
-                            </div>
-                        </div>
-                    </section>
-                </section>
-                <section>
-                    <section data-auto-animate>
-                        <h1>New code highlighting!</h1>
-                        <div>
-                            Now also has Tokyo Night
-                            <code>highlight.js</code>
-                            highlighting implementation
-                        </div>
-                        <pre><code data-trim data-noescape>
-var foo = {
-    bar: function () {
-             alert("Hello, World!");
-         }
-};	
-					</code></pre>
-                    </section>
-                    <section data-auto-animate>
-                        <h1>New code highlighting!</h1>
-                        <h5>Inline code highlighting is now also supported!</h5>
-                        <p>
-                            Just wrap your code with
-                            <code>&lt;code&gt;</code>
-                            tag and get highlighting like this
-                            <code class="js">
-                                const foo = () => {return bar}
-                            </code>
-                            !
-                        </p>
-                    </section>
-                </section>
-                <section>
-                    <h1>Mermaid for beautiful diagrams!</h1>
-                    <div class="mermaid">
-                        <pre>
-						erDiagram
-    CUSTOMER ||--o{ ORDER : ""
-    CUSTOMER {
-        string name
-        string custNumber
-        string sector
-    }
-    ORDER ||--|{ LINE-ITEM : contains
-    ORDER {
-        int orderNumber
-        string deliveryAddress
-    }
-    LINE-ITEM {
-        string productCode
-        int quantity
-        float pricePerUnit
-    }
-    ORDER ||--|{ STUDENT : contains
-    STUDENT {
-        int orderNumber
-        string deliveryAddress
-    }
-						</pre
-                        >
-                    </div>
-                    <h4>
-                        Check documentation
-                        <a href="https://mermaid.js.org/config/usage.html">
-                            here
-                        </a>
-                        !
-                    </h4>
-                </section>
-                <section>
-                    <h1>Now supports Nerd font icons!</h1>
-                    <div>Nerdy project that adds icons to font itself</div>
-                    <h6>
-                        Checkout their site for icons like this
-                        <a href="https://www.nerdfonts.com/">󰖟</a>
-                        !
-                    </h6>
-                </section>
-                <section>
-                    <h1>Now supports automatic QRCode generation!</h1>
-                    <div>
-                        With GoQR you can just add data-type and alt attributes
-                        to your
-                        <code class="html">
-                            &lt;img src="https://goqr.me/" data-type="qrcode" /
-                            &gt;
-                        </code>
-                        tag!
-                    </div>
+                    <h1>Асинхронное программирование</h1>
                     <img
                         class="r-stretch"
-                        src="https://goqr.me/"
+                        src="https://ktkv-presentations.github.com/algos-22"
                         data-type="qrcode" />
                 </section>
                 <section>
-                    <h1>New changes on the way!</h1>
+                    <section>
+                        <h1>Проблема блокирующего кода</h1>
+                        <p>
+                            Если одна инструкция требует много времени
+                            (например, запрос в интернет, чтение файла), то
+                            выполнение программы останавливается до завершения
+                            операции
+                        </p>
+                        <div class="border-r">
+                            <em>
+                                В Python по умолчанию код выполняется синхронно
+                            </em>
+                        </div>
+                        <pre><code data-trim class="python">
+import time
+
+print("Начало")
+time.sleep(3)  # Задержка на 3 секунды
+print("Конец")
+                    </code></pre>
+                    </section>
+                    <section>
+                        <h1>
+                            Синхронное, многопоточное и асинхронное
+                            программирование
+                        </h1>
+                        <div class="border-b">
+                            <h4>Синхронное выполнение</h4>
+                            <div class="grid grid-cols-2 gap-4">
+                                <ul>
+                                    <li>
+                                        Код выполняется строго последовательно.
+                                    </li>
+                                    <li>
+                                        Проблема: долгие операции блокируют
+                                        выполнение других задач.
+                                    </li>
+                                    <li>
+                                        Подходит для простых программ, но
+                                        неэффективно для многозадачности
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <h1>
+                            Синхронное, многопоточное и асинхронное
+                            программирование
+                        </h1>
+                        <div class="border-b">
+                            <h4>Многопоточное программирование</h4>
+                            <div class="grid grid-cols-2 gap-4">
+                                <ul>
+                                    <li>
+                                        Использует библиотеку
+                                        <code>threading</code>
+                                        .
+                                    </li>
+                                    <li>
+                                        Несколько потоков выполняются
+                                        параллельно.
+                                    </li>
+                                    <li>
+                                        Проблема: Python использует GIL (Global
+                                        Interpreter Lock), который ограничивает
+                                        одновременное выполнение потоков в одном
+                                        процессе.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <h1>
+                            Синхронное, многопоточное и асинхронное
+                            программирование
+                        </h1>
+                        <div class="border-b">
+                            <h4>Асинхронное программирование</h4>
+                            <div class="grid grid-cols-2 gap-4">
+                                <ul>
+                                    <li>
+                                        функции, выполнение которых можно
+                                        приостановить на определённых этапах,
+                                        позволяя выполнять другие операции, пока
+                                        не завершится текущая задача
+                                    </li>
+                                    <li>
+                                        Эффективно для задач ввода-вывода
+                                        (сетевые запросы, базы данных, обработка
+                                        файлов).
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td>Подход</td>
+                                    <td>Принцип работы</td>
+                                    <td>Подходит для</td>
+                                    <td>Ограничения</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Синхронный</td>
+                                    <td>Код выполняется последовательно</td>
+                                    <td>Простые скрипты, CLI-утилиты</td>
+                                    <td>Блокировка при ожидании I/O</td>
+                                </tr>
+                                <tr>
+                                    <td>Многопоточный</td>
+                                    <td>
+                                        Несколько потоков (thread) работают
+                                        параллельно
+                                    </td>
+                                    <td>Параллельные вычисления</td>
+                                    <td>
+                                        GIL ограничивает CPU-нагруженные задачи
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Асинхронный</td>
+                                    <td>
+                                        Одна программа выполняет несколько задач
+                                        без блокировки
+                                    </td>
+                                    <td>
+                                        Серверы, веб-скрапинг, сетевые операции
+                                    </td>
+                                    <td>
+                                        Требует другой стиль программирования
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h1>Ключевые слова async и await</h1>
+                        <h3><code>async</code></h3>
+                        <p>
+                            ключевое слово, которое обозначает, что функция
+                            является корутиной (асинхронной функцией)
+                        </p>
+                        <em>
+                            При добавлении
+                            <code>async</code>
+                            перед функцией она становится асинхронной, что
+                            означает, что она не будет выполняться сразу, а
+                            будет возвращать объект корутины.
+                        </em>
+                        <pre><code data-trim class="python">
+async def my_coroutine():
+    print("Задача началась")
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h1>Ключевые слова async и await</h1>
+                        <h3><code>await</code></h3>
+                        <p>
+                            ключевое слово, которое используется внутри
+                            асинхронных функций для ожидания завершения другой
+                            корутины
+                        </p>
+                        <em>
+                            Когда вызывается функция с
+                            <code>await</code>
+                            , выполнение текущей корутины приостанавливается, и
+                            управление передается другим задачам в цикле событий
+                            (event loop), пока не завершится ожидаемая корутина
+                        </em>
+                        <pre><code data-trim class="python">
+async def my_coroutine():
+    await asyncio.sleep(1)
+    print("Задача завершена")
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h1>Event Loop (Цикл событий)</h1>
+                        <p>
+                            центральный компонент асинхронного программирования,
+                            который управляет выполнением асинхронных задач
+                            (корутин) в рамках одного потока
+                        </p>
+                        <pre><code data-trim class="python">
+async def main():
+    # Запуск нескольких асинхронных задач одновременно
+    await asyncio.gather(task_1(), task_2())
+
+asyncio.run(main())
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h4>Задачи event loop</h4>
+                        <ol>
+                            <li>Ожидание задач</li>
+                            <p>
+                                Event loop ожидает появления новых задач или
+                                событий, которые могут быть выполнены.
+                            </p>
+                            <li>Обработка событий</li>
+                            <p>
+                                Когда корутина или асинхронная задача достигает
+                                точки, где требуется ожидание event loop
+                                передает управление другим задачам в очереди.
+                            </p>
+
+                            <li>Запуск задач</li>
+
+                            <p>
+                                Когда задача становится готовой для выполнения
+                                event loop возвращает управление корутине и
+                                продолжает её выполнение.
+                            </p>
+
+                            <li>Цикличность</li>
+                            <p>
+                                Event loop непрерывно перебирает задачи, пока не
+                                завершатся все задания.
+                            </p>
+                        </ol>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h1>Основные функции asyncio</h1>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="border-b">
+                                <h4>
+                                    <code class="python">asyncio.run()</code>
+                                </h4>
+                                <p>
+                                    запускает основной цикл событий и исполняет
+                                    асинхронную корутину
+                                </p>
+                                <pre><code data-trim class="python">
+asyncio.run(main())
+                                </code></pre>
+                            </div>
+                            <div class="border-b">
+                                <h4>
+                                    <code class="python">
+                                        asyncio.create_task()
+                                    </code>
+                                </h4>
+                                <p>
+                                    используется для создания и запуска корутины
+                                    в фоновом режиме
+                                </p>
+                                <pre><code data-trim class="python">
+task = asyncio.create_task(task_1())
+                                </code></pre>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <h1>Основные функции asyncio</h1>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="border-b">
+                                <h4>
+                                    <code class="python">await</code>
+                                </h4>
+                                <p>
+                                    приостанавливает выполнение корутины и
+                                    ожидает результата другой корутины, но не
+                                    блокирует выполнение других задач
+                                </p>
+                                <pre><code data-trim class="python">
+await asyncio.sleep(2)
+                                </code></pre>
+                            </div>
+                            <div class="border-b">
+                                <h4>
+                                    <code class="python">asyncio.gather()</code>
+                                </h4>
+                                <p>
+                                    позволяет запускать несколько задач
+                                    одновременно и ждать, пока все они
+                                    завершатся
+                                </p>
+                                <pre><code data-trim class="python">
+await asyncio.gather(task_1(), task_2())
+                                </code></pre>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <h1>Основные функции asyncio</h1>
+                        <div class="border-b">
+                            <h4>
+                                <code class="python">asyncio.sleep()</code>
+                            </h4>
+                            <p>
+                                используется для имитации асинхронной задержки
+                            </p>
+                            <pre><code data-trim class="python">
+await asyncio.sleep(1)
+                                </code></pre>
+                        </div>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h1>
+                            Модуль
+                            <code class="python">aiohttp</code>
+                        </h1>
+                        <p>
+                            асинхронная библиотека для работы с HTTP в Python,
+                            которая построена на основе asyncio
+                        </p>
+                        <ul>
+                            <li>
+                                Поддержка как асинхронных HTTP-серверов, так и
+                                клиентов
+                            </li>
+                            <li>
+                                Интеграция с asyncio, что позволяет выполнять
+                                запросы, не блокируя выполнение программы
+                            </li>
+                            <li>
+                                Простой интерфейс для отправки GET, POST и
+                                других типов запросов
+                            </li>
+                        </ul>
+                        <pre
+                            class="r-stretch"><code data-trim data-line-numbers class="python">
+import aiohttp
+import asyncio
+
+async def fetch(url):
+    async with aiohttp.ClientSession() as session:
+        async with session.get(url) as response:
+            return await response.text()
+
+async def main():
+    url = 'https://httpbin.org/get'
+    result = await fetch(url)
+    print(result)
+
+asyncio.run(main())
+                        </code></pre>
+                    </section>
                 </section>
             </div>
         </div>
@@ -396,4 +569,3 @@ var foo = {
         </script>
     </body>
 </html>
-
